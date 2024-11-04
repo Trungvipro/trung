@@ -118,17 +118,14 @@ www.googletagservices.com
 18.afs.googleadservices.com
 2.afs.googleadservices.com
 4.afs.googleadservices.com
-<<<<<<< HEAD
 pagead2.googleadservices.com
 partner.googleadservices.com
 partnerssl.googleadservices.com
-=======
 googleadservices.com
 pagead2.googleadservices.com
 partner.googleadservices.com
 partnerssl.googleadservices.com
 www.googleadservices.com
->>>>>>> 2474d32 (commit message)
 analytics.google.com
 region1.analytics.google.com
 click.google-analytics.com
