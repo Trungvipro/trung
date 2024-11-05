@@ -1,5 +1,7 @@
-#!name=Youtube (Music) Enhance 
-#!desc=Áp dụng cho Youtube & Youtube Music 
+#!name = YouTubeADS
+#!desc =Hỗ trợ pip, phát lại nền
+#!author = Trung
+#!homepage=https://github.com/Trungvipro/trung
 #!arguments=Chặn nút tải lên:true,Nút chọn khối:true,Ngôn ngữ dịch phụ đề:vi,Ngôn ngữ dịch lời bài hát:vi,thực thi lệnh:auto,Bật chế độ gỡ lỗi:false 
 #!arguments-desc=- Thông số lá chắn：[true, false] \n- Thông số dịch thuật：[mã ngôn ngữ, off] \n- công cụ tập lệnh：[auto, jsc, webview]\n\n1. Mã ngôn ngữ Google Translate Languages Codes,điền vào off bản dịch sẽ bị tắt\n2. Nên sử dụng công cụ jsc，Nhưng bạn vẫn có thể chuyển sang chế độ xem web để trải nghiệm các tính năng mới của Surge\n3. Bật chế độ gỡ lỗi để xuất thêm nhật ký 
  
