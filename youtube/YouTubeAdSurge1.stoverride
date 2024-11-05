@@ -2,8 +2,8 @@
 #!desc =Hỗ trợ pip, phát lại nền
 #!author = Trung
 #!homepage=https://github.com/Trungvipro/trung
-#!arguments=Chặn nút tải lên:true,Nút chọn khối:true,Ngôn ngữ dịch phụ đề:vi,Ngôn ngữ dịch lời bài hát:vi,thực thi lệnh:auto,Bật chế độ gỡ lỗi:false 
-#!arguments-desc=- Thông số lá chắn：[true, false] \n- Thông số dịch thuật：[mã ngôn ngữ, off] \n- công cụ tập lệnh：[auto, jsc, webview]\n\n1. Mã ngôn ngữ Google Translate Languages Codes,điền vào off bản dịch sẽ bị tắt\n2. Nên sử dụng công cụ jsc，Nhưng bạn vẫn có thể chuyển sang chế độ xem web để trải nghiệm các tính năng mới của Surge\n3. Bật chế độ gỡ lỗi để xuất thêm nhật ký 
+#!arguments=Chặn nút tải lên:true,Nút chọn khối:true,Ngôn ngữ dịch phụ đề:vi,Ngôn ngữ dịch lời bài hát:vi,Thực thi lệnh:auto,Bật chế độ gỡ lỗi:false 
+#!arguments-desc=- Thông số lá chắn：[true, false] \n- Thông số dịch thuật：[mã ngôn ngữ, off] \n- Công cụ tập lệnh：[auto, jsc, webview]\n\n1. Mã ngôn ngữ Google Translate Languages Codes,điền vào off bản dịch sẽ bị tắt\n2. Nên sử dụng công cụ jsc，Nhưng bạn vẫn có thể chuyển sang chế độ xem web để trải nghiệm các tính năng mới của Surge\n3. Bật chế độ gỡ lỗi để xuất thêm nhật ký 
  
 # > Note 
 # Youtube Tính năng phát lại hình trong hình và nền lần lượt bị tắt trong ứng dụng khách 
@@ -16,11 +16,11 @@ AND,((DOMAIN-SUFFIX,googlevideo.com), (PROTOCOL,UDP)),REJECT
 AND,((DOMAIN,youtubei.googleapis.com), (PROTOCOL,UDP)),REJECT 
  
 [Script] 
-youtube.request = type=http-request,pattern=^https:\/\/youtubei\.googleapis\.com\/youtubei\/v1\/(browse|next|player|reel\/reel_watch_sequence|get_watch),requires-body=1,max-size=-1,binary-body-mode=1,engine={{{thực thi lệnh}}},script-path=https://raw.githubusercontent.com/Trungvipro/trung/refs/heads/master/youtube/request.js 
-youtube.response = type=http-response,pattern=^https:\/\/youtubei\.googleapis\.com\/youtubei\/v1\/(browse|next|player|search|reel\/reel_watch_sequence|guide|account\/get_setting|get_watch),requires-body=1,max-size=-1,binary-body-mode=1,engine={{{thực thi lệnh}}},script-path=https://raw.githubusercontent.com/Trungvipro/trung/refs/heads/master/youtube/response.js,argument="{"lyricLang":"{{Ngôn ngữ dịch lời bài hát}}}","captionLang":"{{{Ngôn ngữ dịch phụ đề}}}","blockUpload":{{{Chặn nút tải lên}}},"blockImmersive":{{{Nút chọn khối}}},"debug":{{{Bật chế độ gỡ lỗi}}}}" 
+youtube.request = type=http-request,pattern=^https:\/\/youtubei\.googleapis\.com\/youtubei\/v1\/(browse|next|player|reel\/reel_watch_sequence|get_watch),requires-body=1,max-size=-1,binary-body-mode=1,engine={{{Thực thi lệnh}}},script-path=https://raw.githubusercontent.com/Trungvipro/trung/refs/heads/master/youtube/request.js 
+youtube.response = type=http-response,pattern=^https:\/\/youtubei\.googleapis\.com\/youtubei\/v1\/(browse|next|player|search|reel\/reel_watch_sequence|guide|account\/get_setting|get_watch),requires-body=1,max-size=-1,binary-body-mode=1,engine={{{Thực thi lệnh}}},script-path=https://raw.githubusercontent.com/Trungvipro/trung/refs/heads/master/youtube/response.js,argument="{"lyricLang":"{{Ngôn ngữ dịch lời bài hát}}}","captionLang":"{{{Ngôn ngữ dịch phụ đề}}}","blockUpload":{{{Chặn nút tải lên}}},"blockImmersive":{{{Nút chọn khối}}},"debug":{{{Bật chế độ gỡ lỗi}}}}" 
  
 [Map Local] 
 ^https?:\/\/[\w-]+\.googlevideo\.com\/initplayback.+&oad data-type=text data="" 
  
 [MITM] 
-hostname = %APPEND% *.googlevideo.com, youtubei.googleapis.com
+hostname = %APPEND% *.googlevideo.com, youtubei.googleapis.com, www.youtube.com, s.youtube.com
