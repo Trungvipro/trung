@@ -2,7 +2,7 @@
 #!desc =Hỗ trợ pip, phát lại nền
 #!author = Trung
 #!homepage = https://github.com/Trungvipro/trung
-#!icon = https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/Color/YouTube.png
+#!icon = https://raw.githubusercontent.com/Trungvipro/trung/refs/heads/master/youtube/YouTube.png
 [URL Rewrite]
 (^https?:\/\/[\w-]+\.googlevideo\.com\/(?!dclk_video_ads).+?)&ctier=L(&.+?),ctier,(.+) 302 $1$2$3
 ^https?:\/\/[\w-]+\.googlevideo\.com\/(?!(dclk_video_ads|videoplayback\?)).+&oad reject-200
