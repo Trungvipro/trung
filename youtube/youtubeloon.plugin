@@ -1,7 +1,7 @@
-#!name = Youtube去广告
-#!desc =支持pip，后台播放
-#!author = Maasea 
-#!homepage = https://whatshub.top
+#!name = YoutubeADS
+#!desc =Hỗ trợ pip, phát lại nền
+#!author = Trung
+#!homepage = https://github.com/Trungvipro/trung
 #!icon = https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/Color/YouTube.png
 [URL Rewrite]
 (^https?:\/\/[\w-]+\.googlevideo\.com\/(?!dclk_video_ads).+?)&ctier=L(&.+?),ctier,(.+) 302 $1$2$3
@@ -10,9 +10,8 @@
 ^https?:\/\/(www|s)\.youtube\.com\/(pagead|ptracking) reject-200
 ^https?:\/\/s\.youtube\.com\/api\/stats\/qoe\?adcontext reject-200
 [Script]
-http-request ^https?:\/\/youtubei\.googleapis\.com\/youtubei\/v1\/(browse|next|player|reel\/reel_watch_sequence|get_watch) requires-body=1,binary-body-mode=1,script-path=https://raw.githubusercontent.com/Maasea/sgmodule/master/Script/Youtube/dist/youtube.request.preview.js
-http-response ^https?:\/\/youtubei\.googleapis\.com\/youtubei\/v1\/(browse|next|player|search|reel\/reel_watch_sequence|guide|account\/get_setting|get_watch) requires-body=1,binary-body-mode=1,script-path=https://raw.githubusercontent.com/Maasea/sgmodule/master/Script/Youtube/dist/youtube.response.preview.js
-
+http-request ^https?:\/\/youtubei\.googleapis\.com\/youtubei\/v1\/(browse|next|player|reel\/reel_watch_sequence|get_watch) requires-body=1,binary-body-mode=1,script-path=https://raw.githubusercontent.com/Trungvipro/trung/refs/heads/master/youtube/request.js
+http-response ^https?:\/\/youtubei\.googleapis\.com\/youtubei\/v1\/(browse|next|player|search|reel\/reel_watch_sequence|guide|account\/get_setting|get_watch) requires-body=1,binary-body-mode=1,script-path=https://raw.githubusercontent.com/Trungvipro/trung/refs/heads/master/youtube/response.js
 [MITM]
 hostname = -redirector*.googlevideo.com,*.googlevideo.com,www.youtube.com,s.youtube.com,youtubei.googleapis.com
 

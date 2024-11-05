@@ -1,9 +1,9 @@
-#!name = YouTubeads
+#!name = YouTubeADS
 #!desc =Hỗ trợ pip, phát lại nền
-#!author = Maasea 
-#!homepage=https://whatshub.top
+#!author = Trung
+#!homepage=https://github.com/Trungvipro/trung
 #!icon = https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/Color/YouTube.png
-name: YouTubequguanggao
+name: YouTubeStash
 desc: Hỗ trợ pip, phát lại nền
 http:
   mitm:
@@ -14,13 +14,13 @@ http:
     - "youtubei.googleapis.com"
   script:
     - match: ^https?:\/\/youtubei\.googleapis\.com\/youtubei\/v1\/(browse|next|player|search|reel\/reel_watch_sequence|guide|account\/get_setting|get_watch)
-      name: YouTubequguanggao1
+      name: YouTubeStash1
       type: response
       require-body: true
       binary-mode: true
       timeout: 10
     - match: ^https?:\/\/youtubei\.googleapis\.com\/youtubei\/v1\/(browse|next|player|reel\/reel_watch_sequence|get_watch)
-      name: YouTubequguanggao2
+      name: YouTubeStash2
       type: request
       require-body: true
       binary-mode: true
@@ -32,9 +32,9 @@ http:
     - ^https?:\/\/(www|s)\.youtube\.com\/(pagead|ptracking) - reject-200
     - ^https?:\/\/s\.youtube\.com\/api\/stats\/qoe\?adcontext - reject-200
 script-providers:
-  YouTubequguanggao1:
+  YouTubeStash1:
     url: https://raw.githubusercontent.com/Trungvipro/trung/refs/heads/master/youtube/response.js
     interval: 86400
-  YouTubequguanggao2:
+  YouTubeStash2:
     url: https://raw.githubusercontent.com/Trungvipro/trung/refs/heads/master/youtube/request.js
     interval: 86400
