@@ -121,7 +121,6 @@ www.googletagservices.com
 pagead2.googleadservices.com
 partner.googleadservices.com
 partnerssl.googleadservices.com
-googleadservices.com
 pagead2.googleadservices.com
 partner.googleadservices.com
 partnerssl.googleadservices.com

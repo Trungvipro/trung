@@ -25146,7 +25146,6 @@ google.pluto7.com
 googleads.g.doubleclick.net
 googleads2.g.doubleclick.net
 googleads4.g.doubleclick.net
-googleadservices.com
 googleanalytics.com
 googlecm.hit.gemius.pl
 googledrive-download.com
@@ -64649,7 +64648,6 @@ www.googkle.com
 www.google-analytics.com
 www.google-docs.info
 www.google-docs.org
-www.googleadservices.com
 www.googleailesi.com
 www.googleoptimize.com
 www.googletagmanager.com
