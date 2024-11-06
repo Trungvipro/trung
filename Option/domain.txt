@@ -124,7 +124,6 @@ partnerssl.googleadservices.com
 pagead2.googleadservices.com
 partner.googleadservices.com
 partnerssl.googleadservices.com
-www.googleadservices.com
 analytics.google.com
 region1.analytics.google.com
 click.google-analytics.com
