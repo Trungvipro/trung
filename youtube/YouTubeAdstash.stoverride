@@ -2,7 +2,7 @@
 #!desc =Hỗ trợ pip, phát lại nền
 #!author = Trung
 #!homepage=https://github.com/Trungvipro/trung
-https://raw.githubusercontent.com/Trungvipro/trung/refs/heads/master/youtube/YouTube.png
+#!icon = https://raw.githubusercontent.com/Trungvipro/trung/refs/heads/master/youtube/YouTube.png
 name: YouTubeStash
 desc: Hỗ trợ pip, phát lại nền
 http:
