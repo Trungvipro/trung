@@ -15,13 +15,13 @@ http:
   script:
     - match: ^https?:\/\/youtubei\.googleapis\.com\/youtubei\/v1\/(browse|next|player|reel\/reel_watch_sequence|get_watch)
       name: YouTubeStash1
-      type: response
+      type: request
       require-body: true
       binary-mode: true
       timeout: 10
     - match: ^https?:\/\/youtubei\.googleapis\.com\/youtubei\/v1\/(browse|next|player|search|reel\/reel_watch_sequence|guide|account\/get_setting|get_watch) 
       name: YouTubeStash2
-      type: request
+      type: response
       require-body: true
       binary-mode: true
       timeout: 10
